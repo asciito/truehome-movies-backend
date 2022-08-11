@@ -12,6 +12,8 @@ RUN pip install -r requirements.txt
 
 ENV ENV=/etc/profile
 
+ENV DJANGO_SETTINGS_MODULE=truehome.settings.development
+
 RUN echo 'alias django="python -m manage $@"' >> "$ENV"
 
 EXPOSE 8000
